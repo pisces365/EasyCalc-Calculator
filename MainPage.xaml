@@ -1,0 +1,89 @@
+﻿<Page
+    x:Class="简单计算.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:简单计算"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+
+        <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="48"/>
+        </Grid.RowDefinitions>
+        <TextBlock Name="ShowText" Grid.Row="0" Text="0" FontSize="50" TextAlignment="Right" VerticalAlignment="Center"/> 
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions >
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions >
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Content="7" FontSize="25" Name="Seven"  Margin="2" VerticalAlignment="Stretch"  HorizontalAlignment="Stretch" Click="Seven_Click"/>
+            <Button Content="8" FontSize="25" Grid.Column="1" Name="Eight"  Margin="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Eight_Click"/>
+            <Button Content="9" FontSize="25" Grid.Column="2" Name="Night"  Margin="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Night_Click"/>
+            <Button Content="+" FontSize="25" Grid.Column="3" Name="Add"   Margin="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Add_Click"/>
+
+            <Button Content="4" FontSize="25" Grid.Row="1"  Name="Four"  Margin="2" VerticalAlignment="Stretch"  HorizontalAlignment="Stretch" Click="Four_Click"/>
+            <Button Content="5" FontSize="25" Grid.Row="1" Grid.Column="1" Name="Five"  Margin="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Five_Click"/>
+            <Button Content="6" FontSize="25" Grid.Row="1" Grid.Column="2" Name="Six"  Margin="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Six_Click"/>
+            <Button Content="-" FontSize="25" Grid.Row="1" Grid.Column="3" Name="Min"   Margin="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Min_Click"/>
+
+            <Button Content="1" FontSize="25" Grid.Row="2"  Name="One"  Margin="2" VerticalAlignment="Stretch"  HorizontalAlignment="Stretch" Click="One_Click"/>
+            <Button Content="2" FontSize="25" Grid.Row="2" Grid.Column="1" Name="Two"  Margin="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Two_Click"/>
+            <Button Content="3" FontSize="25" Grid.Row="2" Grid.Column="2" Name="Three"  Margin="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Three_Click"/>
+            <Button Content="×" FontSize="25" Grid.Row="2" Grid.Column="3" Name="mul"   Margin="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="mul_Click"/>
+
+            <Grid Grid.Row="3" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Content="C" FontSize="25"  Name="Delete"  Margin="2" VerticalAlignment="Stretch"  HorizontalAlignment="Stretch"  Click="Delete_Click"/>
+                <Button Content="." FontSize="25"  Name="Dot"  Margin="2" VerticalAlignment="Stretch"  HorizontalAlignment="Stretch"  Click="Dot_Click" Grid.Column="1"/>
+            </Grid>
+            <Button Content="0" FontSize="25" Grid.Row="3" Grid.Column="1" Name="Zero"  Margin="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Zero_Click"/>
+            <Button Content="=" FontSize="25" Grid.Row="3" Grid.Column="2" Name="Echo"  Margin="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="LightBlue" Click="Echo_Click" />
+            <Button Content="÷" FontSize="25" Grid.Row="3" Grid.Column="3" Name="Div"   Margin="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Div_Click"/>
+
+        </Grid>
+        <CommandBar Grid.Row="2"    HorizontalAlignment="Right" VerticalAlignment="Bottom" DefaultLabelPosition="Right" Background="{ThemeResource SystemControlAcrylicWindowBrush}" >
+            <AppBarButton Icon="Home"  Label="关于" >
+                <Button.Flyout>
+                    <Flyout >
+                        <Grid Width="400" Height="120">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel>
+                                <Image Source="Assets/Square44x44Logo.scale-200.png"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="16" Margin="16,-5,0,0" Text="简单·计算" />
+                            </StackPanel>
+                            <StackPanel Grid.Column="1">
+                                <TextBlock TextWrapping="Wrap" FontSize="16"  Text="©2017-2020 Pisces365。保留所有权利。" />
+                                <TextBlock TextWrapping="Wrap" FontSize="16"  Text="版本：1.0.0.0" Margin="0,5,0,0"/>
+                                <HyperlinkButton  NavigateUri="http://www.pisces365.icoc.me/" Content="官方网站" Margin="0,5,0,0" FontSize="16"/>
+                                <HyperlinkButton  NavigateUri="http://www.pisces365.icoc.me/col.jsp?id=101" Content="隐私策略" Margin="0,5,0,0" FontSize="16"/>
+                            </StackPanel>
+                        </Grid>
+                    </Flyout>
+                </Button.Flyout>
+            </AppBarButton>
+            <AppBarButton Icon="Emoji2"  Label="评分"  Click="AppBarButton_Click"/>
+            <AppBarButton Icon="More"  Label="更多应用"  Click="Pisces365_Click"/>
+        </CommandBar>
+
+    </Grid>
+
+</Page>

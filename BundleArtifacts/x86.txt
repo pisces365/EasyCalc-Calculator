@@ -1,0 +1,2 @@
+MainPackage=F:\通用应用程序\简单计算\bin\x86\Release\简单计算_1.0.0.0_x86.msix
+SymbolPackage=F:\通用应用程序\简单计算\obj\x86\Release\Symbols\简单计算_1.0.0.0_x86.appxsym

@@ -1,0 +1,2 @@
+MainPackage=F:\通用应用程序\简单计算\bin\ARM\Release\简单计算_1.0.0.0_ARM.msix
+SymbolPackage=F:\通用应用程序\简单计算\obj\ARM\Release\Symbols\简单计算_1.0.0.0_ARM.appxsym
